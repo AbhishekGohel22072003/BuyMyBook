@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Store Sign In</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-md-center">
+	        <div class="col-md-12 cart_info">
+				<h1>INVOICE OF THE OrderID: {{ order.id }}</h1>
+		        <div class="ordered-info">
+		                <h3>Book: {{ order.totalbook }}</h3>
+		                <h3>Name: {{ order.name }}</h3>
+		                <h3>Phone: {{ order.phone }}</h3>
+		                <h3>Email: {{ order.email }}</h3>
+						<h3>Amount To Be Paid: {{ order.payable }}</h3>
+		                {% comment %} <h1>Account No: {{ order.account_no }}</h1> {% endcomment %}
+		                <h3>Payment Method: {{ order.payment_method }}</h3>
+		                <h3>Shipping address: {{ order.address }}, {{ order.district }}, {{ order.division }}:{{ order.zip_code }}</h3>
+		        </div>
+	        </div>
+		</div>
+	</div> 
+</body>
+</html>

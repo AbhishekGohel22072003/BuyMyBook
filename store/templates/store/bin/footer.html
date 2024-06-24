@@ -1,0 +1,110 @@
+{% load static %}
+
+
+
+<style>
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        font-family: Arial, sans-serif;
+        text-align: left;
+    }
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /* Style for the headings */
+    .footer h3 {
+        color: #f39c12; /* Orange heading text color */
+        font-size: 20px; /* Font size */
+        margin-bottom: 25px; /* Space below the heading */
+        text-transform: uppercase; /* Uppercase text */
+        letter-spacing: 1px; /* Letter spacing */
+    }
+
+    /* Style for the footer contact and menu lists */
+    .footer ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0; /* Remove default padding */
+        text-align: left; /* Left-align text */
+    }
+
+    /* Style for each list item in contact and menu */
+    .footer li {
+        margin-bottom: 15px; /* Space between items */
+    }
+
+    /* Style for the icons in contact section */
+    .footer_contact i {
+        margin-right: 2100px; /* Space between icon and text */
+        color: #f39c12; /* Orange icon color */
+    }
+
+    /* Style for links in menu */
+    .footer_menu a {
+        color: #fff; /* Link color */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth color transition */
+    }
+
+    /* Hover effect for links */
+    .footer_menu a:hover {
+        color: #f39c12; /* Change color on hover to orange */
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+
+
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-xs-12 footer_menu">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="footer_contact">
+                        <i class="fa fa-phone"></i>
+                        <p>+91 9054221578</p>
+                    </li>
+                    <li class="footer_contact">
+                        <i class="fa fa-envelope"></i>
+                        <p>buymybook@gmail.com</p>
+                    </li>
+                    <li class="footer_contact">
+                        <i class="fa fa-map-marker"></i>
+                        <p>Ahmedabad India</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-xs-12 footer_menu">
+                <h3>Menu</h3>
+                <ul>
+                    <li class="footer_menu">
+                        <a href="{% url 'store:books' %}">
+                            <i class="fa fa-angle-right"></i>Books
+                        </a>
+                    </li>
+                    <!-- Add more menu items as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
